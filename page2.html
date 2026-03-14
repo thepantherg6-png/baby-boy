@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>I'm Sorry</title>
+
+<style>
+
+body{
+margin:0;
+background:#0d0d0d;
+color:white;
+font-family:Arial;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+overflow:hidden;
+}
+
+.container{
+max-width:600px;
+padding:40px;
+animation:fade 2s ease;
+}
+
+h1{
+color:#ff4d6d;
+}
+
+p{
+font-size:20px;
+line-height:1.6;
+color:#e6e6e6;
+}
+
+.heart{
+position:absolute;
+bottom:-20px;
+color:#ff4d6d;
+font-size:22px;
+animation:float 8s linear infinite;
+}
+
+@keyframes float{
+0%{transform:translateY(0);opacity:0;}
+50%{opacity:1;}
+100%{transform:translateY(-110vh);opacity:0;}
+}
+
+@keyframes fade{
+from{opacity:0;transform:translateY(30px);}
+to{opacity:1;transform:translateY(0);}
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- Background Music -->
+<audio autoplay loop>
+<source src="aaaaa.mpeg" type="audio/mpeg">
+</audio>
+
+<div class="container">
+
+<h1>I Am Really Sorry</h1>
+
+<p>
+I am sorry baby boy.. 
+I know aap bhut preshan ho meri vjh se...
+Mne aapke sardard kr rkha h... 
+M kush nhi rkh pa rhi hu aapko jo harkate m kr rhi hu aajkl.... 
+Please mujhe maaf krdo baby. 
+I really Love You. 
+I wish aap mere paas hmesha rho... 
+Forever and ever...
+</p>
+
+<p>
+I really hope you forgive me.
+Because you are very special to me.
+</p>
+
+<p>❤️ I'm truly sorry ❤️</p>
+
+</div>
+
+<script>
+
+function createHearts(){
+
+setInterval(function(){
+
+let heart=document.createElement("div");
+
+heart.className="heart";
+heart.innerHTML="❤";
+
+heart.style.left=Math.random()*100+"vw";
+heart.style.fontSize=(15+Math.random()*25)+"px";
+
+document.body.appendChild(heart);
+
+setTimeout(()=>{
+heart.remove();
+},8000);
+
+},300);
+
+}
+
+createHearts();
+
+</script>
+
+</body>
+</html>
